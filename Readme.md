@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Екатерина Иванова](https://up.htmlacademy.ru/htmlcss/23/user/861641).
-* Наставник: `Неизвестно`.
+* Наставник: `Денис Власов`(https://htmlacademy.ru/profile/amaringo).
 
 ---
 
