@@ -56,11 +56,62 @@
         </ul>
 
         <h1 class="page-title">Перфораторы</h1>
+
         <section class="filters">
-          <h2>Фильтр</h2>
+          <h2>Фильтр:</h2>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Цена:</legend>
+            </fieldset>
 
-        <!-- Здесь форма -->
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="checkbox" name="bosch" class="visually-hidden
+                   filter-input-checkbox" id="bosch-filter" checked>
+                   <label for="bosch-filter">Bosch</label>
+                 </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="interscol" class="visually-hidden
+                  filter-input-checkbox" id="interscol-filter">
+                  <label for="interscol-filter">Интерскол</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="makita" class="visually-hidden
+                  filter-input-checkbox" id="makita-filter" checked>
+                  <label for="makita-filter">Makita</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="dewolt" class="visually-hidden 
+                  filter-input-checkbox" id="dewolt-filter">
+                  <label for="dewolt-filter">Dewalt</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="hitachi" class="visually-hidden
+                  filter-input-checkbox" id="hitachi-filter">
+                  <label for="hitachi-filter">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
 
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="radio" class="visually-hidden filter-input-radio"
+                  name="power-option" id="accumulator" value="accumulator" checked>
+                  <label for="accumulator">Аккумуляторные</label>
+                </li>
+                <li class="filter-option">
+                  <input type="radio" class="visually-hidden filter-input-radio"
+                  name="power-option" id="chain" value="chain">
+                  <label for="chain">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="filter-button button">Показать</button>
+          </form>
         </section>
 
         <section class="sorting">
@@ -69,8 +120,8 @@
             <li><a href="to-price.html">По цене</a></li>
             <li><a href="to-type.html">По типу</a></li>
             <li><a href="to-functional">По функционалу</a></li>
-            <li><a class="up" href="up.html"></a></li>
-            <li><a class="down" href="down.html"></a></li>
+            <li><a class="up" href="up.html">По возрастанию</a></li>
+            <li><a class="down" href="down.html">По убыванию</a></li>
           </ul>
         </section>
 
@@ -203,8 +254,8 @@
           <p>
             <a class="button" href="cart.html">Оформить заказ</a>
           </p>
-          <p><button type="button">Продолжить покупки</button></p>
-          <p><button type="button">Закрыть</button></p>
+          <button type="button">Продолжить покупки</button>
+          <button type="button">Закрыть</button>
 
         </section>
 
