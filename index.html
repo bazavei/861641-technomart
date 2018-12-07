@@ -11,10 +11,10 @@
   <body>
     <header class="main-header">
       <div class="header-top container">
-
-        <a class="logo">
-        <img src="img/logo.png" alt="Логотип Техномарт">
-        </a>
+        <div class="logo">
+          <a >Техномарт</a>
+        </div>
+        <input type="search" name="q" placeholder="Поиск:">
         <a class="marks" href="#">Закладки</a>
         <a class="basket" href="#">Корзина</a>
         <a class="order" href="#">Оформить заказ</a>
@@ -51,7 +51,7 @@
 
     <main class="container">
 
-      <section class="promo">
+      <section class="promo container">
         <h2 class="visually-hidden">Товары и услуги</h2>
 
         <ul class="promo-list">
@@ -80,10 +80,32 @@
             <h3>Доставка</h3>
             <a class="btn" href="delivery.html">Бесплатно</a>
           </li>
+        </ul>
+          <div class="slider">
+            <h2 class="visually-hidden">Продукция</h2>
+            <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="product-2" name="toggle">
 
-          <li class="slider">
-            <h3>Дрели</h3>
-            <b>Соседям на радость!</b>
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-active"
+              for="product-1">Первый</label>
+              <label class="slider-controls-item" for="product-2">Второй</label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item">
+                <h3>Дрели</h3>
+                <b>Соседям на радость!</b>
+                <a class="button to-catalog" href="/inner.html">Открыть каталог</a>
+              </li>
+              <li class="slider-item">
+                <h3>Перфораторы</h3>
+                <b>Настоящие мужские игрушки</b>
+                <a class="button to-catalog" href="/inner.html">Открыть каталог</a>
+              </li>
+            </ul>
+          </div>
+
+
             <figure class="slider-content">
               <!--
               <img src="img/slide1.jpg" width="620" height="266" alt="слайд1">
@@ -92,8 +114,7 @@
             <a class="button to-catalog" href="/inner.html">Открыть каталог</a>
             <button name="back" class="control">Назад</button>
             <button name="next" class="control">Вперёд</button>
-          </li>
-        </ul>
+
 
       </section>
 
@@ -106,7 +127,9 @@
         <ul class="catalog-list">
 
           <li class="catalog-item">
-            <img src="img/bosch_bfg9000.jpg" width="100" height="100" alt="Перфоратор BOSH BFG 9000">
+            <div class="image">
+              <img src="img/bosch_bfg9000.jpg" width="100" height="100" alt="Перфоратор BOSH BFG 9000">
+            </div>
             <h3>Перфоратор BOSH BFG 9000</h3>
             <b class="previous-price">32500 Р.</b>
             <b class="new-price">25500 Р.</b>
@@ -117,7 +140,9 @@
           </li>
 
           <li class="catalog-item">
-            <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+            <div class="image">
+              <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+            </div>
             <h3>Перфоратор BOSH BFG 3000</h3>
             <b class="previous-price">22500 Р.</b>
             <b class="new-price">15500 Р.</b>
@@ -128,7 +153,9 @@
           </li>
 
           <li class="catalog-item">
-            <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+            <div class="image">
+              <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+            </div>
             <h3>Перфоратор BOSH BFG 6000</h3>
             <b class="previous-price">30500 Р.</b>
             <b class="new-price">25500 Р.</b>
@@ -139,7 +166,10 @@
           </li>
 
           <li class="catalog-item">
-            <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+            <div class="flag flag-new">новинка</div>
+            <div class="image">
+              <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+            </div>
             <h3>Перфоратор BOSH BFG 2000</h3>
             <b class="previous-price"></b>
             <b class="new-price">12500 Р.</b>
@@ -274,27 +304,26 @@
         </section>
       </div>
 
-      <section class="wtite-us popup">
+      <section class="write-us popup">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <form class="write-us-form" action="https://echo.htmlacademy.ru/"
+        <form id="write-us-form" class="write-us-form" action="https://echo.htmlacademy.ru/"
         method="post">
           <p>
-            <label> Ваше имя:
-              <input type="text" name="name" placeholder="Имя Фамилия">
-            </label>
+            <label for="name"> Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
           </p>
           <p>
-            <label>Ваш e-mail:
-              <input type="email" name="email" placeholder="email@example.com">
-            </label>
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
           </p>
           <p>
-            <label>Текс письма:
-              <textarea name="text" rows="5" placeholder="В свободной форме" ></textarea>
-            </label>
+            <label for="text">Текс письма:</label>
+            <textarea name="text" id="text" rows="6" cols="73" placeholder="В свободной форме" ></textarea>
           </p>
-          <button type="submit">Отправить</button>
         </form>
+        <div>
+          <button class="button" form="write-us-form" type="submit">Отправить</button>
+        </div>
         <button type="button">Закрыть</button>
       </section>
 
@@ -304,7 +333,7 @@
           <img src="img/full-map.jpg" width="940" height="446"
           alt="Магазин по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
         </p>
-        <button type="button">Закрыть</button>
+        <button class="close-popup" type="button" aria-label="Закрыть"></button>
       </section>
 
     </main>
