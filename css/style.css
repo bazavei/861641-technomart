@@ -216,16 +216,37 @@ h1{
 }
 
 .header-contacts {
-  width: 300px;
   margin: 0;
   margin-right: 20px;
   padding: 0;
 }
 
 .header-contacts .phone {
+  position: relative;
+
   font-size: 21px;
   line-height: 21px;
   color:#ee3643;
+
+  min-width: 144px;
+  margin: 0;
+  padding: 13px 45px 11px 74px;
+
+  border: 3px solid white;
+}
+
+.header-contacts .phone::before {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  content: "";
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/svg/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .header-contacts .adress {
@@ -255,16 +276,30 @@ h1{
 }
 
 .user-navigation .login-link {
-  width: 120px;
-  margin: 0;
-  padding: 0;
+  position: relative;
 
+  margin: 0;
+  margin-right: 11px;
+  padding: 14px 10px 14px 45px;;
+}
+
+.login-link svg {
+  position: absolute;
+  top: 17px;
+  left: 14px;
+
+  margin-right: 14px;
+}
+
+.login-link:hover path,
+.login-link:focus path{
+  fill: #32425c;
 }
 
 .user-navigation .signup {
   width: 150px;
   margin: 0;
-  padding: 0;
+  padding: 14px 10px;
 }
 
 .main-navigation {
