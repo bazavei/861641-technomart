@@ -73,6 +73,7 @@ input[type="radio"].visually-hidden {
 
 .header-top .logo {
   display: inline-block;
+  position: relative;
   width: 220px;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -82,10 +83,21 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 
   text-align: center;
-  padding: 12px 45px;
+  padding: 12px 35px;
   margin: 0;
 
   background-color: #ee3643;
+}
+
+.header-top .logo::before {
+  position: absolute;
+  right: 0px;
+  top: 47px;
+  content: "";
+  width: 220px;
+  height: 5px;
+
+  background-color: #8e1e26;
 }
 
 .container input[type=search] {
@@ -296,6 +308,10 @@ h1{
   fill: #32425c;
 }
 
+.login-link:active path {
+  fill: #c5c5c5;
+}
+
 .user-navigation .signup {
   width: 150px;
   margin: 0;
@@ -328,10 +344,13 @@ h1{
   justify-content: space-around;
   align-content: center;
 
+  min-width: 60px;
+
   box-shadow: inset 0px -5px 0 0 #293449;
 }
 
-.site-navigation li {
+.site-navigation a {
+  display: inline-block;
   padding: 22px 31px 26px 32px;
 }
 
@@ -784,6 +803,7 @@ h2{
 
 .page-footer-navigation .logo {
   display: inline-block;
+  position: relative;
   align-self: flex-start;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -792,12 +812,24 @@ h2{
   color: #ffffff;
   text-transform: uppercase;
 
+  min-width: 150px;
   padding: 20px 35px;
+  text-align: center;
   margin: 0;
   margin-right: 170px;
 
   background-color: #ee3643;
+}
 
+.page-footer-navigation .logo::before {
+  position: absolute;
+  right: 0px;
+  top: 68px;
+  content: "";
+  width: 100%;
+  height: 5px;
+
+  background-color: #8e1e26;
 }
 
 .footer-navigation {
