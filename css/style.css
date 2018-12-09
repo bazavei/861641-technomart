@@ -100,6 +100,12 @@ input[type="radio"].visually-hidden {
   background-color: #8e1e26;
 }
 
+.logo:hover,
+.logo:focus,
+.logo:active {
+  background-color: #ca2c37;
+}
+
 .container input[type=search] {
   width: 270px;
   margin: 0;
@@ -412,7 +418,7 @@ h2{
 
 .promo .promo-item {
   width: 300px;
-  min-height: 120px;
+  margin-bottom: 20px;
 }
 
 .promo h3 {
@@ -421,26 +427,51 @@ h2{
   line-height: 30px;
   color: #ffffff;
   font-weight: 700;
+
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 23px;
 }
 
 .promo-materials {
   background-color: #ffbf47;
+  background-image: url("../img/svg/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 60%;
 }
 
 .promo-tools {
   background-color: #3bbce3;
+  background-image: url("../img/svg/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 60%;
+
 }
 
 .promo-technique{
   background-color: #dc91d8;
+  background-image: url("../img/svg/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 60%;
+
 }
 
 .promo-sale{
   background-color: #8ed78f;
+  background-image: url("../img/svg/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 60%;
+
 }
 
 .promo-delivery{
   background-color: #ffc047;
+  background-image: url("../img/svg/icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 60%;
+
 }
 
 .promo .slider {
@@ -448,9 +479,12 @@ h2{
   width: 620px;
   height: 266px;
   box-sizing: border-box;
-  margin-top: auto;
+  margin-top: 0;
 
   background-color: brown;
+  background-image: url("../img/slide1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 /*
 .slider-item {
@@ -551,16 +585,22 @@ h2{
 }
 */
 .promo .btn {
+  display: inline-block;
+  width: 135px;
+
+  margin: 0;
+  margin-bottom: 22px;
+  margin-left: 25px;
+  padding: 14px 0px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 17.5px;
   color: #ffffff;
   text-align: center;
+  vertical-align: middle;
   text-transform: uppercase;
-
-  width: 135px;
-  height: 38px;
 
   background-color: rgba(0, 0, 0, 0.1);
 }
