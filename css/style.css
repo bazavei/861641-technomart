@@ -1031,16 +1031,58 @@ h2{
 .breadcrumbs {
   display: flex;
   margin: 0;
-  padding: 0;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
-.breadcrumbs a {
+.breadcrumbs a{
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs li {
+  position: relative;
+
   margin-right: 40px;
 
-  font-style: 14px;
-  line-height: 17.5px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
   color: black;
+}
+
+.breadcrumbs .main {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.breadcrumbs .main::after {
+  content: "";
+  position: absolute;
+
+  top: 2px;
+
+  width: 14px;
+  height: 12px;
+
+  background-image: url("../img/svg/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs li:not(.main)::before {
+  content: "";
+  position: absolute;
+
+  left: -18px;
+  top: 2px;
+
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/svg/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .page-title {
@@ -1063,15 +1105,38 @@ h2{
   margin-left: 30px;
 }
 
-legend {
+.filter {
+  margin: 0;
+  margin-top: 23px;
+  padding: 0;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters .filter:last-of-type {
+  border-bottom: none;
+}
+
+.filter legend {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   font-style: normal;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .filters h2 {
+  font-family: "PT Sans", Arial,sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+
   background-color: #f7f3ec;
 }
 
@@ -1079,13 +1144,82 @@ legend {
   width: 220px;
 }
 
+.range-wrapper {
+  min-height: 80px;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #f7f3ec;
+}
+
+.range-controls {
+  position: relative;
+  top: 39px;
+  left: 20px;
+  width: 180px;
+  height: 2px;
+
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  background-color: #d7dcde;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+
 .filter-list {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
 
+  margin: 0;
+  margin-top: 25px;
+
   list-style: none;
+}
+
+.filter-option {
+  padding-bottom: 20px;
 }
 
 .filter-button {
@@ -1094,17 +1228,37 @@ legend {
   font-size: 13px;
   text-transform: uppercase;
 
+  margin-top: 41px;
+
   width: 140px;
   height: 38px;
+
+  background-color: white;
   border: 1px solid #e5e5e5;
 }
 
 .sorting {
+  display: flex;
+
   width: 700px;
   background-color: #f7f3ec;
+  margin-bottom: 20px;
+
+}
+
+.sorting h2 {
+
+  width: 140px;
+  margin: 10px 0;
+  margin-left: 15px;
 }
 
 .sorting ul {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  min-width: 450px;
+
   margin: 0;
   padding: 0;
 
@@ -1116,6 +1270,10 @@ legend {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sorting a {
@@ -1137,6 +1295,8 @@ legend {
 .catalog-columns {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 60px;
 }
 
 .catalog {
@@ -1150,7 +1310,7 @@ legend {
   justify-content: space-between;
 
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding: 0;
 }
 
@@ -1336,20 +1496,36 @@ legend {
 }
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.pagination-item a{
+.pagination-item {
+  margin-right: 10px;
+  min-width: 38px;
+
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 13.5px 16.5px;
+
   font-family: "PT Sans", Arial,sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
   text-align: center;
+}
 
-  border: 1px solid #e5e5e5;
+.pagination-item:last-child {
+ margin-right: 0;
 }
 
 .pagination-item a:hover,
@@ -1376,6 +1552,8 @@ legend {
 }
 
 .about-product {
+  padding: 70px 0;
+
   background-color: #f2f6f8;
 }
 
@@ -1385,6 +1563,8 @@ legend {
   font-size: 30px;
   line-height: 30px;
 
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .about-product p {
@@ -1392,4 +1572,7 @@ legend {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+
+  margin: 0;
+  padding: 0;
 }
