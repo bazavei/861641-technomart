@@ -13,7 +13,7 @@
 
         <div class="header-top">
           <div class="container">
-            <a class="logo"  href="/index.html">Техномарт</a>
+            <a class="logo" href="index.html">Техномарт</a>
             <input type="search" name="q" placeholder="Поиск:">
             <a class="marks" href="#">Закладки</a>
             <a class="basket" href="#">Корзина</a>
@@ -31,8 +31,19 @@
 
           <div class="user-navigation">
             <div class="user-control">
-              <a class="user-name" href="user-name.html">Равшан Джамшутович</a>
-              <button name="exit"></button>
+              <a class="user-name" href="user-name.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                  <path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+                </svg>
+                Равшан Джамшутович</a>
+              <button class="user-exit" name="exit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+                  <g fill="#c5c5c5">
+                    <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
+                    <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+                  </g>
+                </svg>
+              </button>
             </div>
             <a class="user-order" href="user-order">Мои заказы</a>
             <a class="user-area" href="user-area">Личный кабинет</a>
@@ -40,9 +51,9 @@
         </div>
         <nav class="main-navigation container">
           <ul class="site-navigation">
-            <li><a href="main.html">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="company.html">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="inner.html">Каталог</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="special.html">Спецпредложения</a></li>
             <li><a href="delivery.html">Доставка</a></li>
@@ -77,6 +88,12 @@
                       <div class="range-toggle range-toggle-min"></div>
                       <div class="range-toggle range-toggle-max"></div>
                     </div>
+                  </div>
+
+                  <div class="price-controls">
+                    <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+
+                    <label class="max-price">до <input type="text" name="max-price" value="30000"></label>
                   </div>
 
                 </fieldset>
@@ -160,7 +177,9 @@
               <ul class="catalog-list">
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  <div class="image">
+                    <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 3000</h3>
                   <b class="previous-price">22500 Р.</b>
                   <b class="new-price">15500 Р.</b>
@@ -171,7 +190,9 @@
                 </li>
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  <div class="image">
+                    <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 6000</h3>
                   <b class="previous-price">30500 Р.</b>
                   <b class="new-price">25500 Р.</b>
@@ -182,7 +203,9 @@
                 </li>
 
                 <li class="catalog-item flag-new">
-                  <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  <div class="image">
+                    <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 2000</h3>
                   <b class="previous-price"></b>
                   <b class="new-price">12500 Р.</b>
@@ -193,7 +216,9 @@
                 </li>
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  <div class="image">
+                    <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 3000</h3>
                   <b class="previous-price">22500 Р.</b>
                   <b class="new-price">15500 Р.</b>
@@ -204,7 +229,9 @@
                 </li>
 
                 <li class="catalog-item flag-new">
-                  <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  <div class="image">
+                    <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 6000</h3>
                   <b class="previous-price">30500 Р.</b>
                   <b class="new-price">25500 Р.</b>
@@ -215,7 +242,9 @@
                 </li>
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  <div class="image">
+                    <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 2000</h3>
                   <b class="previous-price"></b>
                   <b class="new-price">12500 Р.</b>
@@ -226,7 +255,9 @@
                 </li>
 
                 <li class="catalog-item flag-new">
-                  <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  <div class="image">
+                    <img src="img/bosch_bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 3000</h3>
                   <b class="previous-price">22500 Р.</b>
                   <b class="new-price">15500 Р.</b>
@@ -237,7 +268,9 @@
                 </li>
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  <div class="image">
+                    <img src="img/bosch_bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 6000</h3>
                   <b class="previous-price">30500 Р.</b>
                   <b class="new-price">25500 Р.</b>
@@ -248,7 +281,9 @@
                 </li>
 
                 <li class="catalog-item">
-                  <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  <div class="image">
+                    <img src="img/bosch_bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
+                  </div>
                   <h3>Перфоратор BOSH BFG 2000</h3>
                   <b class="previous-price"></b>
                   <b class="new-price">12500 Р.</b>
@@ -327,9 +362,9 @@
 
             <div class="footer-social">
               <ul>
-                <li><a class="social-button" href="#">Вконтакте</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">Инстаграм</a></li>
+                <li><a class="social-button vk" href="#">Вконтакте</a></li>
+                <li><a class="social-button fb" href="#">Фейсбук</a></li>
+                <li><a class="social-button ins" href="#">Инстаграм</a></li>
               </ul>
             </div>
 
