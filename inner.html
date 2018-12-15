@@ -14,7 +14,14 @@
         <div class="header-top">
           <div class="container">
             <a class="logo" href="index.html">Техномарт</a>
-            <input type="search" name="q" placeholder="Поиск:">
+            <form id="search-box" class="search-box" method="get" action="https://echo.htmlacademy.ru">
+              <button aria-label="кнопка поиска" form="search-boxs">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+                </svg> -->
+              </button>
+              <input type="search" name="q" placeholder="Поиск:">
+            </form>
             <a class="marks" href="#">Закладки</a>
             <a class="basket" href="#">Корзина</a>
             <a class="order" href="#">Оформить заказ</a>
@@ -320,12 +327,12 @@
         </section>
 
         <section class="cart-popup popup">
-          <h2>Товар добавлен в корзину!</h2>
+          <h2 class="cart-add">Товар добавлен в корзину!</h2>
           <p>
             <a class="button" href="cart.html">Оформить заказ</a>
+            <button class="continue" type="button">Продолжить покупки</button>
           </p>
-          <button type="button">Продолжить покупки</button>
-          <button type="button">Закрыть</button>
+          <button class="close-popup" type="button">Закрыть</button>
 
         </section>
 
