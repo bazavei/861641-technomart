@@ -129,7 +129,7 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
-.search-box button::before {
+/* .search-box button::before {
   content: "";
   position: absolute;
 
@@ -149,7 +149,7 @@ input[type="radio"].visually-hidden {
 
 .search-box svg {
   position: absolute;
-}
+} */
 
 .search-box input[type=search] {
   width: 270px;
@@ -164,6 +164,10 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
 
   border: none;
+}
+
+.search:focus ~ button path {
+  fill: #ee3643;
 }
 
 .search-box input::-webkit-input-placeholder {
@@ -390,8 +394,6 @@ h1{
 .main-navigation {
   font-size: 17px;
   line-height: 17px;
-
-  background-color: #32425c;
 }
 
 .main-navigation a {
@@ -416,6 +418,8 @@ h1{
   min-width: 60px;
 
   box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+
 }
 
 .site-navigation a {
@@ -1234,13 +1238,7 @@ h2{
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.popup p {
-  margin: 0;
-  padding: 0;
-}
-
 .close-popup {
-
   font-size: 0;
   border: none;
 
@@ -1342,7 +1340,7 @@ h2{
   width: 460px;
   margin: 37px 80px;
 
-  border-color: #ee3643;
+  border: none;
 }
 
 .map-popup {
@@ -1366,10 +1364,14 @@ h2{
 .cart-popup {
   display: flex;
   flex-direction: column;
-  top: 215px;
-  left: 30%;
+  left: 50%;
+  top: 50%;
+
+  margin-left: -310px;
+  margin-top: -141px;
 
   width: 620px;
+  height: 282px;
 
   background-color: white;
   background-image: url("../img/form-1.png");
@@ -1407,12 +1409,6 @@ h2{
   padding: 12px 55px;
 }
 
-.popup{
-  display: none;
-  position: fixed;
-  z-index: 101;
-}
-
 .continue {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -1427,6 +1423,17 @@ h2{
   border: none;
   border-radius: 3px;
 
+}
+
+.popup{
+  display: none;
+  position: fixed;
+  z-index: 101;
+}
+
+.popup p {
+  margin: 0;
+  padding: 0;
 }
 
 .inner-page main {
@@ -2066,8 +2073,7 @@ h2{
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
-  border: 3px solid #63a63e;
-  border-bottom-color: #367315;
+  border: none;
   background-color: #63a63e;
 }
 
@@ -2084,7 +2090,9 @@ h2{
   display:block;
 }
 
-.buy {
+.buttons .buy {
+  position: relative;
+
   font: inherit;
   font-size: 14px;
   line-height: 18px;
@@ -2093,22 +2101,46 @@ h2{
 
   width: 135px;
   height: 38px;
+  padding-left: 49px;
+  padding-right: 45px;
+
   box-shadow: inset 0px -3px 0 0 #367315;
   background-color: #63a63e;
 }
 
-.buy:hover,
-.buy:focus {
+.buttons .buy::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  width: 14px;
+  height: 15px;
+
+  background-image: url("../img/svg/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.buttons .buy:hover,
+.buttons .buy:focus {
   box-shadow: inset 0px -3px 0 0 #367315;
   background-color: #5fbb2d;
 }
 
-.buy:active {
+.buttons .buy:hover::before,
+.buttons .buy:focus::before,
+.buttons .buy:active::before {
+  opacity: 1;
+}
+
+.buttons .buy:active {
   background-color: #518534;
   box-shadow: none;
 }
 
-.to-marks {
+.buttons .to-marks {
   font: inherit;
   font-weight: normal;
   font-style: normal;
@@ -2122,12 +2154,12 @@ h2{
   border: 3px solid #63a63e;
 }
 
-.to-marks:hover,
-.to-marks:focus {
+.buttons .to-marks:hover,
+.buttons .to-marks:focus {
   border: 3px solid #32425c;
 }
 
-.to-marks:active {
+.buttons .to-marks:active {
   color: rgba(50, 66, 92, 0.3);
   border: 3px solid rgba(50, 66, 92, 0.3)
 }
