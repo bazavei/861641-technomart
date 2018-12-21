@@ -46,7 +46,7 @@ input[type="radio"].visually-hidden {
 .header-top {
   min-height: 41px;
 
-  background-color: #32425c;
+  background-color: #293449;
 }
 
 .header-top .container {
@@ -275,12 +275,14 @@ h1{
   font-size: 16px;
   font-style: italic;
   line-height: 23px;
+  letter-spacing: -0.5px;
   color:#ee3643;
 
   width: 210px;
   margin: 0;
   padding: 0;
-  margin-left: 50px;
+  margin-top: 2px;
+  margin-left: 52px;
   margin-right: 65px;
 }
 
@@ -300,7 +302,7 @@ h1{
 
   min-width: 151px;
   margin: 0;
-  padding: 6px 47px 8px 74px;
+  padding: 5px 48px 9px 69px;
 
   border: 3px solid white;
 }
@@ -326,7 +328,8 @@ h1{
   line-height: 24px;
 
   padding: 0;
-  padding-top: 10px;
+  padding-top: 13px;
+  padding-left: 7px;
   margin: 0;
 
   color: #32425c;
@@ -361,12 +364,12 @@ h1{
 
   margin: 0;
   margin-right: 11px;
-  padding: 10px 25px 10px 52px;;
+  padding: 9px 20px 12px 46px;
 }
 
 .login-link svg {
   position: absolute;
-  top: 17px;
+  top: 14px;
   left: 14px;
 
   margin-right: 14px;
@@ -559,8 +562,8 @@ h2{
 
 .slider input[type="radio"]  {
   position: relative;
-  left: 50%;
-  bottom: -57px;
+  left: 48%;
+  bottom: -59px;
   z-index: 2;
 }
 
@@ -644,10 +647,13 @@ h2{
 
 .slider .button {
   margin: 0;
-  margin-top: 120px;
+  margin-left: -5px;
+  margin-top: 117px;
 
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 48px;
+  padding-bottom: 9px;
+  padding-top: 11px;
+  padding-right: 48px;
 }
 
 .promo .btn {
@@ -669,6 +675,7 @@ h2{
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
 }
 
 .promo .btn:hover,
@@ -958,7 +965,7 @@ h2{
 }
 
 .page-footer{
-  margin-top: 45px;
+  margin-top: 42px;
 }
 
 .page-footer a {
@@ -1095,18 +1102,20 @@ h2{
   display: flex;
   justify-content: space-between;
 
-  padding: 30px 0;
+  padding: 25px 0;
 }
 
 .company-copyright {
-  margin-top: 6px;
+  padding: 0;
+  margin-top: 10px;
   width: 240px;
 }
 
 .footer-social {
   width: 160px;
 
-  margin-top: 2px;
+  margin-top: 7px;
+  margin-right: 30px;
   margin-left: 94px;
 }
 
@@ -1187,25 +1196,28 @@ h2{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 290px;
 
   margin: 0;
+  margin-top: 10px;
+  margin-right: 9px;
 }
 
-.developer p {
-  margin: 0;
-  margin-left: 25px;
-
-  padding: 0;
-  padding-top: 6px;
+.developer a {
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .developer .footer-feedback {
+  padding: 0;
+  margin: 0;
   width: 140px;
-  margin-left: 50px;
 }
 
 .developer .footer-copyright {
-  width: 140px;
+  padding: 0;
+  margin: 0;
+  width: 100px;
 }
 
 .company-copyright,
@@ -1947,8 +1959,8 @@ h2{
   content: "";
   position: absolute;
 
-  top: -1px;
-  right: -1px;
+  top: 0px;
+  right: 0px;
   width: 60px;
   height: 60px;
   text-indent: -1000px;
