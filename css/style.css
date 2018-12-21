@@ -267,8 +267,9 @@ input[type="radio"].visually-hidden {
 
 .header-middle {
   display: flex;
+  justify-content: space-between;
 
-  margin-bottom: 41px;
+  margin-bottom: 38px;
 }
 
 h1{
@@ -283,13 +284,11 @@ h1{
   padding: 0;
   margin-top: 2px;
   margin-left: 52px;
-  margin-right: 65px;
 }
 
 .header-contacts {
   margin: 0;
   margin-top: 10px;
-  margin-right: 69px;
   padding: 0;
 }
 
