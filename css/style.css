@@ -205,7 +205,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   padding-left: 45px;
-  padding-right: 30px;
+  padding-right: 29px;
 }
 
 .header-top .basket::before {
@@ -396,11 +396,12 @@ h1{
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
 
-  padding-left: 23px;
-  padding-right: 27px;
+  padding-left: 15px;
+  padding-right: 23px;
 
   list-style: none;
 
@@ -1448,16 +1449,19 @@ h2{
   line-height: 18px;
 }
 
+.inner-page .user-navigation {
+  margin-top: 0;
+}
+
 .user-control {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  padding: 14px 0;
+  padding: 12px 0;
   padding-left: 45px;
-
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 
   background-color: white;
 }
@@ -1487,6 +1491,7 @@ h2{
 .user-exit {
   border: none;
   margin-left: 30px;
+  background-color: transparent;
 }
 
 .user-navigation .user-order,
@@ -1526,7 +1531,7 @@ h2{
 .breadcrumbs {
   display: flex;
   margin: 0;
-  padding: 20px 0;
+  padding: 21px 0;
 }
 
 .breadcrumbs a{
@@ -1536,10 +1541,10 @@ h2{
   color: black;
 }
 
-.breadcrumbs li {
+.breadcrumbs li:not(.main) {
   position: relative;
 
-  margin-right: 40px;
+  margin-left: 44px;
 
   font-size: 13px;
   line-height: 18px;
@@ -1548,6 +1553,9 @@ h2{
 }
 
 .breadcrumbs .main {
+  position: relative;
+  margin-right: 10px;
+
   font-size: 0;
   width: 1px;
   height: 1px;
@@ -1558,6 +1566,7 @@ h2{
   position: absolute;
 
   top: 2px;
+  left: -2px;
 
   width: 14px;
   height: 12px;
@@ -1571,7 +1580,7 @@ h2{
   content: "";
   position: absolute;
 
-  left: -18px;
+  left: -28px;
   top: 2px;
 
   width: 8px;
@@ -1596,15 +1605,18 @@ h2{
   font-size: 30px;
   text-transform: uppercase;
   line-height: 30px;
+  letter-spacing: 0px;
   color: #32425c;
 
   margin: auto;
-  margin-left: 30px;
+  margin-top: 29px;
+  margin-left: 29px;
 }
 
 .filter {
   margin: 0;
-  margin-top: 23px;
+  margin-top: 11px;
+  margin-bottom: 17px;
   padding: 0;
 
   border: none;
@@ -1630,9 +1642,9 @@ h2{
   line-height: 18px;
 
   margin: 0;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 10px;
-  padding-left: 18px;
+  padding-left: 20px;
 
   background-color: #f7f3ec;
 }
@@ -1657,8 +1669,8 @@ h2{
   width: 180px;
   height: 2px;
 
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 14px;
+  margin-bottom: 9px;
 
   background-color: #d7dcde;
 }
@@ -1711,7 +1723,7 @@ h2{
 .price-controls::after {
   content: "";
   position: absolute;
-  top: 35%;
+  top: 31%;
   left: 48%;
 
   width: 10px;
@@ -1726,13 +1738,12 @@ h2{
   height: 18px;
 
   margin: 0;
-  margin-bottom: 25px;
-  padding: 13px 20px;
+  margin-bottom: 22px;
+  padding: 11px 20px;
 
   font-size: 0px;
 
   vertical-align: bottom;
-  : pointer;
 
   background-color: #f7f3ec;
 }
@@ -1756,7 +1767,6 @@ h2{
   line-height: 18px;
 }
 
-
 .filter-list {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
@@ -1764,7 +1774,8 @@ h2{
   text-transform: uppercase;
 
   margin: 0;
-  margin-top: 25px;
+  margin-top: 15px;
+  padding-left: 34px;
 
   list-style: none;
 }
@@ -1863,7 +1874,7 @@ h2{
   background-position: 0 0;
 }
 
-.filter- {
+.filter-button {
   font: inherit;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1880,24 +1891,28 @@ h2{
 
 .sorting {
   display: flex;
+  justify-content: space-between;
+
 
   width: 700px;
   background-color: #f7f3ec;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
 }
 
 .sorting h2 {
-
   width: 140px;
-  margin: 10px 0;
-  margin-left: 15px;
+  margin: 9px 0;
+  margin-left: 19px;
 }
 
 .sorting ul {
-  display: flex;
   position: relative;
-  justify-content: space-around;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
   min-width: 450px;
 
   margin: 0;
@@ -1913,6 +1928,7 @@ h2{
   text-transform: uppercase;
 
   margin: 0;
+  margin-left: 67px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -1931,6 +1947,24 @@ h2{
 .active-sort a{
   border-bottom: none;
   color: #ee3643;
+}
+
+.sorting .up,
+.sorting .down {
+  margin-right: 19px;
+  margin-left: 0;
+}
+
+.sorting .up {
+  margin-left: 47px;
+}
+
+.up path {
+  fill: red;
+}
+
+.down svg{
+  transform: rotate(180deg);
 }
 
 .catalog-columns {
@@ -1976,7 +2010,7 @@ h2{
   align-items: center;
 
   width: 218px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   border: 1px solid #e5e5e5;
 }
@@ -2072,8 +2106,9 @@ h2{
   display: block;
   width: 129px;
   margin: 0 auto;
+  margin-top: 4px;
   margin-bottom: 7px;
-  padding: 7px 0;
+  padding: 8px 0;
 
   color: white;
   font-size: 14px;
@@ -2180,13 +2215,14 @@ h2{
   flex-wrap: wrap;
 
   margin: 0;
+  margin-top: 31px;
   padding: 0;
 
   list-style: none;
 }
 
 .pagination-item {
-  margin-right: 10px;
+  margin-right: 8px;
   min-width: 38px;
 
   border-radius: 3px;
@@ -2195,7 +2231,7 @@ h2{
 
 .pagination-item a {
   display: block;
-  padding: 13.5px 16.5px;
+  padding: 9px 8px;
 
   font-family: "PT Sans", Arial,sans-serif;
   font-size: 13px;
@@ -2206,6 +2242,10 @@ h2{
 
 .pagination-item:last-child {
  margin-right: 0;
+ padding-left: 22px;
+ padding-right: 23px;
+
+ text-transform: uppercase;
 }
 
 .pagination-item:hover,
@@ -2232,7 +2272,8 @@ h2{
 }
 
 .about-product {
-  padding: 70px 0;
+  padding: 64px 0;
+  padding-bottom: 26px;
 
   background-color: #f2f6f8;
 }
@@ -2244,7 +2285,7 @@ h2{
   line-height: 30px;
 
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .about-product p {
