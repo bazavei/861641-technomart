@@ -1,4 +1,82 @@
-.body {
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+@keyframes shake {
+    0%,to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+body {
     margin: 0;
     min-width: 960px;
     font-family: "Cuprum",Arial,sans-serif;
@@ -10,12 +88,11 @@
 }
 
 a {
-    text-decoration: none;
-    font-family: "Cuprum",Arial,sans-serif;
+    text-decoration: none
 }
 
 .main-header {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     background-color: #f4f7f9
 }
 
@@ -48,19 +125,19 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 45px
+    margin-bottom: 47px
 }
 
 .header-top .logo,.header-top a {
     display: inline-block;
     font-family: "Cuprum",Arial,sans-serif;
     color: #fff;
+    vertical-align: middle;
     margin: 0
 }
 
 .header-top a {
     max-width: 150px;
-    vertical-align: middle;
     font-size: 17px;
     line-height: 18px;
     padding: 12px 0
@@ -69,11 +146,11 @@ a {
 .header-top .logo {
     position: relative;
     width: 220px;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
     text-align: center;
-    padding: 10px 35px;
+    padding: 10px 35px 8px;
     background-color: #ee3643
 }
 
@@ -123,7 +200,7 @@ a {
     background-color: #212a3a
 }
 
-.filter-input-checkbox+label:focus::before,.filter-input-checkbox+label:hover::before,.filter-input-radio+label:focus::before,.filter-input-radio+label:hover::before,.header-top .basket:focus::before,.header-top .basket:hover::before,.header-top .marks:focus::before,.header-top .marks:hover::before,.search:focus+svg,.search:hover+svg {
+.header-top .basket:focus::before,.header-top .basket:hover::before,.header-top .marks:focus::before,.header-top .marks:hover::before,.search:focus+svg,.search:hover+svg {
     opacity: 1
 }
 
@@ -153,10 +230,11 @@ a {
     color: #fff
 }
 
-.header-top .basket,.header-top .marks {
+.header-top .marks {
     position: relative;
-    padding-left: 45px;
-    padding-right: 30px
+    padding-left: 44px;
+    padding-right: 27px;
+    min-width: 75px
 }
 
 .header-top .basket::before,.header-top .marks::before {
@@ -173,11 +251,17 @@ a {
 }
 
 .header-top .basket {
-    padding-right: 29px
+    position: relative;
+    padding-left: 51px;
+    min-width: 100px
+}
+
+.inner-page .basket {
+    background-color: #ee3643
 }
 
 .header-top .basket::before {
-    left: 15px;
+    left: 19px;
     background-image: url(../img/svg/icon-cart.svg)
 }
 
@@ -195,7 +279,8 @@ a {
 }
 
 .header-top .order {
-    padding: 12px 20px;
+    padding: 12px 22px 12px 20px;
+    min-width: 73px;
     background-color: #63a63e
 }
 
@@ -215,22 +300,28 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 38px
+    min-height: 84px;
+    margin-bottom: 27px
+}
+
+.header-contacts .adress,h1 {
+    font-family: "Cuprum",Arial,sans-serif
 }
 
 h1 {
-    font-size: 16px;
     font-style: italic;
-    line-height: 23px;
     letter-spacing: -.5px;
-    color: #ee3643;
     width: 210px;
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
     padding: 0;
     margin: 2px 0 0 52px
 }
 
 .header-contacts {
-    margin: 10px 0 0;
+    min-width: 279px;
+    margin: 10px 0 0 17px;
     padding: 0
 }
 
@@ -239,9 +330,10 @@ h1 {
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
-    min-width: 151px;
+    min-width: 145px;
     margin: 0;
-    padding: 5px 48px 9px 69px;
+    vertical-align: middle;
+    padding: 8px 50px 6px 70px;
     border: 3px solid #fff
 }
 
@@ -258,17 +350,17 @@ h1 {
 }
 
 .header-contacts .adress {
-    font-family: "Cuprum",Arial,sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    padding: 13px 0 0 7px;
+    padding: 14px 0 0 9px;
     margin: 0;
     color: #32425c
 }
 
 .user-navigation {
-    margin-top: 10px
+    margin-top: 10px;
+    min-width: 299px
 }
 
 .user-navigation a {
@@ -290,8 +382,8 @@ h1 {
 
 .user-navigation .login-link {
     position: relative;
-    margin: 0 11px 0 0;
-    padding: 9px 20px 12px 46px
+    margin: 0 11px 0 20px;
+    padding: 9px 20px 12px 44px
 }
 
 .login-link svg {
@@ -312,7 +404,7 @@ h1 {
 .user-navigation .signup {
     width: 150px;
     margin: 0;
-    padding: 10px 25px
+    padding: 9px 23px 12px 25px
 }
 
 .main-navigation {
@@ -332,6 +424,7 @@ h1 {
     align-content: center;
     padding-left: 15px;
     padding-right: 23px;
+    margin: 0;
     list-style: none;
     -webkit-box-shadow: inset 0 -5px 0 0 #293449;
     box-shadow: inset 0 -5px 0 0 #293449;
@@ -340,7 +433,7 @@ h1 {
 
 .site-navigation a {
     display: block;
-    padding: 21px 31px 24px;
+    padding: 20px 31px 23px;
     color: #fff
 }
 
@@ -357,7 +450,7 @@ h1 {
     display: inline-block;
     margin-right: 16px;
     padding: 10px 30px;
-    font-family: "Cuprum",Arial,sans-serif;
+    font: inherit;
     font-size: 14px;
     line-height: 18px;
     color: #fff;
@@ -420,34 +513,33 @@ h2 {
     background-color: #ffbf47;
     background-image: url(../img/svg/icon-1.svg);
     background-repeat: no-repeat;
-    background-position: 83% 50%
+    background-position: 83.2% 53%
 }
 
-.promo-tools {
+.promo-technique,.promo-tools {
     background-color: #3bbce3;
     background-image: url(../img/svg/icon-2.svg);
     background-repeat: no-repeat;
-    background-position: 87% 52%
+    background-position: 87.4% 53%
 }
 
-.promo-sale,.promo-technique {
+.promo-technique {
     background-color: #dc91d8;
     background-image: url(../img/svg/icon-3.svg);
-    background-repeat: no-repeat;
     background-position: 86% 50%
 }
 
-.promo-sale {
+.promo-delivery,.promo-sale {
     background-color: #8ed78f;
     background-image: url(../img/svg/icon-4.svg);
-    background-position: 81% 50%
+    background-repeat: no-repeat;
+    background-position: 81.2% 51%
 }
 
-.promo .slider,.promo-delivery {
+.promo-delivery {
     background-color: #ffc047;
     background-image: url(../img/svg/icon-5.svg);
-    background-repeat: no-repeat;
-    background-position: 86% 50%
+    background-position: 86% 54%
 }
 
 .promo-wrapper {
@@ -460,16 +552,7 @@ h2 {
     width: 620px;
     height: 266px;
     margin-top: 0;
-    background-image: url(../img/slide1.jpg);
-    background-position: 0 0;
     background-color: brown
-}
-
-.slider input[type=radio] {
-    position: relative;
-    left: 48%;
-    bottom: -59px;
-    z-index: 2
 }
 
 .slider-controls label {
@@ -496,8 +579,58 @@ h2 {
     background-image: url(../img/svg/icon-right.svg)
 }
 
-.slider-inner {
-    overflow: hidden
+.slider-controls .slider-dot-left::after,.slider-controls .slider-dot-right::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 221px;
+    left: 315px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%
+}
+
+.slider-controls .slider-dot-left::after {
+    left: 295px
+}
+
+#btn-1:checked~.slider-controls .slider-dot-left::before,#btn-2:checked~.slider-controls .slider-dot-right::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 223px;
+    left: 317px;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%
+}
+
+#btn-1:checked~.slider-controls .slider-dot-left::before {
+    left: 297px
+}
+
+.slider-slides {
+    display: none;
+    overflow: hidden;
+    width: 620px;
+    height: 266px
+}
+
+.slide1,.slide2 {
+    position: absolute;
+    background-image: url(../img/slide1.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0
+}
+
+.slide1 {
+    background-image: url(../img/slide2.jpg)
+}
+
+#btn-1:checked~.slider-inner .slide1,#btn-2:checked~.slider-inner .slide2 {
+    display: block
 }
 
 .promo .btn,.slider-slides b,.slider-slides h3 {
@@ -529,20 +662,23 @@ h2 {
 }
 
 .slider .button {
-    margin: 122px 0 0 -5px;
-    padding: 11px 48px 9px
+    position: absolute;
+    top: 205px;
+    left: 25px;
+    margin: 0;
+    padding: 11px 48px 9px 50px
 }
 
 .promo .btn {
     width: 135px;
-    margin: 0 0 25px 25px;
-    padding: 10px 0;
+    margin: 1px 0 23px 23px;
+    padding: 11px 0 9px;
     font-size: 14px;
     line-height: 17.5px;
     text-align: center;
     text-transform: uppercase;
     background-color: rgba(0,0,0,.1);
-    border-radius: 2px
+    border-radius: 1px
 }
 
 .promo .btn:focus,.promo .btn:hover {
@@ -557,22 +693,21 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     background-color: #f9f5f0
 }
 
-.title-and-link .products-title {
+.title-and-link .makers-title,.title-and-link .products-title {
     display: block;
-    margin-top: 27px;
+    margin-top: 29px;
     margin-left: 29px;
+    padding-bottom: 3px;
     color: #32425c
 }
 
 .title-and-link .makers-title {
-    display: block;
-    margin-top: 29px;
     margin-left: 24px;
-    color: #32425c
+    padding-bottom: 5px
 }
 
 .title-and-link .button {
@@ -582,7 +717,7 @@ h2 {
 }
 
 .popular-makers {
-    margin-bottom: 60px
+    margin-bottom: 64px
 }
 
 .makers,.makers-item {
@@ -610,7 +745,7 @@ h2 {
     -ms-flex-align: center;
     align-items: center;
     width: 218px;
-    height: 143px;
+    height: 144px;
     margin: 0 0 20px;
     background-color: #fff;
     border: 1px solid #eaeaea
@@ -631,7 +766,7 @@ h2 {
 }
 
 .service {
-    padding-top: 70px;
+    padding-top: 65px;
     background-color: #f4f7f9
 }
 
@@ -731,14 +866,14 @@ h2 {
 
 .slide {
     width: 630px;
-    min-height: 300px;
+    min-height: 285px;
     margin-left: 70px
 }
 
 .delivery-slide {
     background-image: url(../img/delivery.png);
     background-repeat: no-repeat;
-    background-position: 100% 61%
+    background-position: 100% 100%
 }
 
 .index-columns {
@@ -748,15 +883,19 @@ h2 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 40px 0
+    padding: 55px 0 42px
 }
 
 .index-columns p {
-    margin-bottom: 24px
+    margin-bottom: 23px
 }
 
 .index-columns .about-company {
     width: 540px
+}
+
+.about-company p:nth-of-type(2) {
+    width: 385px
 }
 
 .index-columns .contacts {
@@ -845,6 +984,7 @@ h2 {
     min-width: 150px;
     padding: 17px 35px;
     text-align: center;
+    vertical-align: middle;
     margin: 0 170px 0 0;
     background-color: #ee3643
 }
@@ -863,6 +1003,8 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -873,7 +1015,8 @@ h2 {
 }
 
 .footer-contacts {
-    margin-top: -9px;
+    margin-top: -10px;
+    padding-left: 3px;
     min-width: 322px
 }
 
@@ -881,6 +1024,8 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -922,7 +1067,6 @@ h2 {
 }
 
 .footer-bottom {
-    font-family: "Cuprum",Arial,sans-serif;
     background-color: #293449
 }
 
@@ -941,8 +1085,8 @@ h2 {
 
 .footer-social {
     width: 160px;
-    margin-top: 8px;
-    margin-right: 31px;
+    margin-top: 9px;
+    margin-right: 32px;
     margin-left: 94px
 }
 
@@ -988,7 +1132,7 @@ h2 {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 290px;
-    margin: 10px 9px 0 0
+    margin: 10px 10px 0 0
 }
 
 .developer a {
@@ -1109,6 +1253,8 @@ h2 {
 .write-us input[placeholder],.write-us textarea[placeholder] {
     text-align: left;
     vertical-align: middle;
+    padding-left: 10px;
+    padding-top: 10px;
     color: #a9a9a9
 }
 
@@ -1135,8 +1281,18 @@ h2 {
 }
 
 .map-popup p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     margin: 0;
     padding: 0
+}
+
+.map-popup iframe {
+    position: relative;
+    z-index: 2;
+    border: 0
 }
 
 .cart-popup,.cart-popup p {
@@ -1175,6 +1331,11 @@ h2 {
     padding-bottom: 68px
 }
 
+.popup p {
+    margin: 0;
+    padding: 0
+}
+
 .cart-popup p {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1208,9 +1369,17 @@ h2 {
     z-index: 101
 }
 
-.popup p {
-    margin: 0;
-    padding: 0
+.popup-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: bounce .6s;
+    animation: bounce .6s
+}
+
+.popup-error {
+    -webkit-animation: shake .6s;
+    animation: shake .6s
 }
 
 .inner-page .user-navigation,.inner-page main {
@@ -1232,12 +1401,12 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 12px 0 12px 45px;
-    margin: 0 0 4px;
+    padding: 11px 68px 12px 45px;
+    margin: 0;
     background-color: #fff
 }
 
-.user-name {
+.user-exit,.user-name {
     position: relative
 }
 
@@ -1255,17 +1424,19 @@ h2 {
     fill: #c5c5c5
 }
 
-.user-exit {
-    border: 0;
-    margin-left: 30px;
-    background-color: transparent
+.user-exit svg {
+    position: absolute;
+    top: -9px;
+    left: 37px
 }
 
 .user-navigation .user-area,.user-navigation .user-order {
     display: inline-block;
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 17px;
+    padding-top: 7px;
+    padding-right: 12px;
+    vertical-align: middle;
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
@@ -1276,8 +1447,8 @@ h2 {
 .user-order::after {
     content: "";
     position: absolute;
-    top: 8px;
-    right: -5px;
+    top: 14px;
+    right: -7px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -1353,7 +1524,6 @@ h2 {
 }
 
 .page-title h1 {
-    font-family: "Cuprum",Arial,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -1387,17 +1557,14 @@ h2 {
     line-height: 30px
 }
 
-.filters h2,.range-wrapper {
-    margin: 0;
-    background-color: #f7f3ec
-}
-
 .filters h2 {
     font-size: 13px;
     line-height: 18px;
+    margin: 0;
     padding-top: 9px;
     padding-bottom: 10px;
-    padding-left: 20px
+    padding-left: 20px;
+    background-color: #f7f3ec
 }
 
 .filters {
@@ -1406,7 +1573,9 @@ h2 {
 
 .range-wrapper {
     min-height: 80px;
-    padding: 0
+    margin: 0 0 9px;
+    padding: 0;
+    background-color: #f7f3ec
 }
 
 .range-controls {
@@ -1443,7 +1612,7 @@ h2 {
     box-shadow: 0 2px 1px 0 rgba(0,1,1,.2)
 }
 
-.range-toggle:hover {
+.range-toggle:focus,.range-toggle:hover {
     background: #1c4f80
 }
 
@@ -1462,8 +1631,7 @@ h2 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    position: relative;
-    font-family: "PT Sans",Arial,sans-serif
+    position: relative
 }
 
 .price-controls::after {
@@ -1519,6 +1687,7 @@ h2 {
 .filter-option label {
     position: relative;
     display: block;
+    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1532,14 +1701,10 @@ h2 {
     top: -2px;
     width: 23px;
     height: 23px;
-    opacity: .7;
+    opacity: .6;
     background-image: url(../img/svg/checkbox-off.svg);
     background-repeat: no-repeat;
     background-position: 0 0
-}
-
-.filter-input-checkbox+label:active::before,.filter-input-radio:checked+label:active::before {
-    opacity: .3
 }
 
 .filter-input-checkbox:checked+label::before {
@@ -1549,7 +1714,7 @@ h2 {
     position: absolute;
     width: 27px;
     height: 23px;
-    opacity: .7;
+    opacity: .6;
     background-image: url(../img/svg/checkbox-on.svg);
     background-repeat: no-repeat;
     background-position: 0 0
@@ -1562,17 +1727,27 @@ h2 {
     position: absolute;
     width: 25px;
     height: 25px;
-    opacity: .6;
+    opacity: .5;
     background-image: url(../img/svg/radio-off.svg);
     background-repeat: no-repeat;
     background-position: 0 0
 }
 
 .filter-input-radio:checked+label::before {
-    opacity: .6;
-    background-image: url(../img/svg/radio-on.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0
+    opacity: .5;
+    background-image: url(../img/svg/radio-on.svg)
+}
+
+.filter-input-checkbox+label:focus::before,.filter-input-checkbox+label:hover::before,.filter-input-checkbox:checked+label:active::before,.filter-input-checkbox:checked+label:hover::before,.filter-input-radio+label:focus::before,.filter-input-radio+label:hover::before,.filter-input-radio:checked+label:active::before .filter-input-radio:checked+label:hover::before {
+    opacity: 1
+}
+
+.filter-input:disabled+label::before {
+    opacity: .3
+}
+
+.buttons .buy:active::before,.buttons .buy:focus::before,.buttons .buy:hover::before,.filter-input:focus+label::before,.filter-input:hover+label::before {
+    opacity: 1
 }
 
 .filter-button {
@@ -1704,7 +1879,7 @@ h2 {
 .flag-new::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     right: 0;
     width: 60px;
     height: 60px;
@@ -1725,8 +1900,8 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 218px;
-    margin-bottom: 21px;
+    width: 217px;
+    margin-bottom: 20px;
     border: 1px solid #e5e5e5
 }
 
@@ -1739,12 +1914,13 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 184px;
-    height: 170px
+    width: 217px;
+    height: 173px
 }
 
 .catalog-item img {
-    margin: auto
+    margin: auto;
+    width: 100%
 }
 
 .catalog-item b,.catalog-item h3 {
@@ -1756,7 +1932,7 @@ h2 {
 .catalog-item h3 {
     min-height: 40px;
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 0 25px;
     font-size: 18px;
     line-height: 20px;
@@ -1806,7 +1982,7 @@ h2 {
     left: 0;
     width: 218px;
     padding: 40px 0;
-    background-color: rgba(255,255,255,.9);
+    background-color: #fff;
     z-index: 10
 }
 
@@ -1835,12 +2011,13 @@ h2 {
     display: none
 }
 
-.catalog-item:hover .buttons {
+.catalog-item:focus .buttons,.catalog-item:hover .buttons {
     display: block
 }
 
 .buttons .buy {
     position: relative;
+    font: inherit;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1873,10 +2050,6 @@ h2 {
     background-color: #5fbb2d
 }
 
-.buttons .buy:active::before,.buttons .buy:focus::before,.buttons .buy:hover::before {
-    opacity: 1
-}
-
 .buttons .buy:active {
     background-color: #518534;
     -webkit-box-shadow: none;
@@ -1884,6 +2057,7 @@ h2 {
 }
 
 .buttons .to-marks {
+    font: inherit;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
