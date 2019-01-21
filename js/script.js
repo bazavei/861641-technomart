@@ -20,7 +20,6 @@ try {
 feedback.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("popup-show");
-  name.focus();
   });
 
 close.addEventListener("click", function (evt) {
@@ -76,9 +75,10 @@ var cartPopup = document.querySelector(".cart-popup");
 var cartClose = cartPopup.querySelector(".close-popup");
 
 cartAdd.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.add("popup-show");
-});
+    evt.preventDefault();
+    cartPopup.classList.add("popup-show");
+  });
+
 
 cartClose.addEventListener("click", function (evt) {
   evt.preventDefault();

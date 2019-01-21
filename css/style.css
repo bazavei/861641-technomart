@@ -533,7 +533,7 @@ h2{
 
 .promo .promo-item {
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .promo h3 {
@@ -735,11 +735,6 @@ h2{
   display: block;
 }
 
-/* .slider-slides {
-  width: 200%;
-  transition: transform 0.8s ease;
-} */
-
 .slider-slides h3 {
   max-width: 220px;
   margin: 0;
@@ -821,7 +816,8 @@ h2{
   display: -ms-flexbox;
   display: flex;
 
-  margin-bottom: 20px;
+  min-height: 89px;
+  margin-bottom: 19px;
   background-color: #f9f5f0;
 }
 
@@ -830,7 +826,6 @@ h2{
 
   margin-top: 29px;
   margin-left: 29px;
-  padding-bottom: 3px;
 
   color: #32425c;
 }
@@ -871,6 +866,7 @@ h2{
           justify-content: space-between;
 
   margin: 0;
+  margin-top: 20px;
   padding: 0;
 
   list-style: none;
@@ -1238,11 +1234,6 @@ h2{
   list-style: none;
 }
 
-.footer-navigation a:hover,
-.footer-navigation a:focus {
-
-}
-
 .footer-contacts p{
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
@@ -1411,27 +1402,23 @@ h2{
 }
 
 .close-popup {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+
   font-size: 0;
   border: none;
-
-  width: 1px;
-  height: 1px;
-
-  margin: 0;
-  padding: 0;
-}
-
-.close-popup::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: 7px;
 
   width: 21px;
   height: 21px;
 
-  background-image: url("../img/svg/icon-close.svg");
+  margin: 0;
+  padding: 0;
+
   z-index: 100;
+  background-color: transparent;
+  background-image: url("../img/svg/icon-close.svg");
+
 }
 
 .write-us-form {
@@ -2376,7 +2363,7 @@ h2{
           align-items: center;
 
   width: 217px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   border: 1px solid #e5e5e5;
 }
@@ -2437,29 +2424,17 @@ h2{
 
 .catalog-item .new-price {
   position: relative;
-  width: 80px;
-  min-height: 20px;
-  margin-left: 4px;
+  width: 141px;
+  min-height: 38px;
+  margin-left: 8px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  padding-left: 28px;
-  padding-right: 33px;
-
-  color: white;
-  background: #ee3643;
-  border-radius: 3px;
-}
-
-.catalog-item .new-price::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: -20px;
-  width: 0;
-  height: 0;
-  border: 18.5px solid white;
-  border-left-color: #ee3643;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 33px 7px 28px;
+  color: #fff;
+  background-image: url("../img/svg/btn-red-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-item .buttons{
